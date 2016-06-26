@@ -1,5 +1,5 @@
 #### PART 1 ####
-pollutantmean <- function (directory , pollutant , id ){
+pollutantmean <- function (directory , pollutant , id =1:332 ){
   
   my_data <- NULL
   res <- NULL
@@ -46,7 +46,8 @@ test <- pollutantmean("data", "nitrate", 70:72) # up to this point we are good
 print (test)
 test2 <- pollutantmean("data", "sulfate", 1:10) # up to this point we are good 
 test2
-
+q <- pollutantmean("data", "nitrate")
+print (q)
 ################### PART 2 ####################
 
 
@@ -116,6 +117,8 @@ complete <- function (directory, id = 1:332){
 df <- complete("data", c(2, 4, 8, 10, 12))
 test_2 <- complete("data", 30:25)
 test_2
+cc <- complete("data", 54)
+print(cc)
 
 
 
